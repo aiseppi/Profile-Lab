@@ -1,0 +1,9 @@
+<form class="form" #submitForm="ngForm" (ngSubmit)="theSubmittedEvent(submitForm)">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" ngModel />
+    <label for="contact">Contact</label>
+    <input type="text" id="contact" name="contact" ngModel />
+    <label for="bio">Bio</label>
+    <input type="text" id="bio" name="bio" ngModel />
+    <button>Update</button>
+</form>
