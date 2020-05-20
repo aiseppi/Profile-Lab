@@ -6,9 +6,9 @@ import { UserProfile } from './interfaces/user-profile';
 })
 export class ProfileService {
   user: UserProfile = {
-    name: "Alyssa D. Crechiolioliolio",
-    contact: "alyssa@lyssmail.com",
-    bio: "she already done had herses"
+    name: "Bob Dobalina",
+    contact: "mistadobalina@delmail.com",
+    bio: "I'll really make you sick with my fraudulent behavior"
   }
   constructor() { }
 

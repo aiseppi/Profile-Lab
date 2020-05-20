@@ -16,12 +16,12 @@ export class EditComponent implements OnInit {
   ngOnInit(): void {
   }
   theSubmittedEvent(form: NgForm): void {
-    this.user = {
+    let updatedUser: UserProfile = {
       name: form.value.name,
       contact: form.value.contact,
       bio: form.value.bio
     }
-    this.profileService.setUserProfile(this.user);
+    this.profileService.setUserProfile(updatedUser);
     this.router.navigate(["profile"])
   }
 
