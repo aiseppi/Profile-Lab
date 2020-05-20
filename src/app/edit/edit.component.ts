@@ -14,14 +14,17 @@ export class EditComponent implements OnInit {
   constructor(private router: Router, private profileService: ProfileService) { }
 
   ngOnInit(): void {
+    //when the component is rendered set property to be what the current state of the profile is,
+    // this ties in with the one way data binding on the ts file
+    this.user = this.profileService.getUserProfile();
   }
   theSubmittedEvent(form: NgForm): void {
-    this.user = {
+    let newProfile = {
       name: form.value.name,
       contact: form.value.contact,
       bio: form.value.bio
     }
-    this.profileService.setUserProfile(this.user);
+    this.profileService.setUserProfile(newProfile);
     this.router.navigate(["profile"])
   }
 

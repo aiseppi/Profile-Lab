@@ -1,9 +1,13 @@
 <form class="form" #submitForm="ngForm" (ngSubmit)="theSubmittedEvent(submitForm)">
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" ngModel />
+    <input type="text" id="name" name="name" [ngModel]="user.name" />
     <label for="contact">Contact</label>
-    <input type="text" id="contact" name="contact" ngModel />
+    <input type="text" id="contact" name="contact" [ngModel]="user.contact" />
     <label for="bio">Bio</label>
-    <input type="text" id="bio" name="bio" ngModel />
+    <input type="text" id="bio" name="bio" [ngModel]="user.bio" />
     <button>Update</button>
 </form>
+
+<!-- [ngModel]="user.name" (one way data-binding) makes it so when you edit the profile,
+within the inputs are the current values so when you edit you can see what the current value is,
+like you would on facebook, etc.-->
